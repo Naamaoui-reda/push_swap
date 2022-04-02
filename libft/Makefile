@@ -6,10 +6,11 @@
 #    By: rnaamaou <rnaamaou@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/05 17:34:09 by rnaamaou          #+#    #+#              #
-#    Updated: 2022/04/02 20:39:55 by rnaamaou         ###   ########.fr        #
+#    Updated: 2022/04/02 20:45:37 by rnaamaou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
+NAME = libft.a
 
 SRCS    =  ft_isdigit.c ft_memset.c ft_isprint.c ft_strlcat.c\
 		   ft_strlcpy.c ft_tolower.c ft_bzero.c ft_strlen.c\

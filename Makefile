@@ -6,7 +6,7 @@
 #    By: rnaamaou <rnaamaou@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/02 18:58:43 by rnaamaou          #+#    #+#              #
-#    Updated: 2022/04/02 20:38:40 by rnaamaou         ###   ########.fr        #
+#    Updated: 2022/04/02 20:42:46 by rnaamaou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,11 +27,10 @@ SRC =  check_errors.c free.c isnumber.c utils.c
 SRC_OBJ = ${SRC:%c=%o}
 
 FLAGS = -Wall -Wextra -Werror
-$(LIBFT) :
+${LIBFT} :
 	make -C ${MAKE_LIBFT}
 
 all : ${NAME}
-
 
 ${NAME} : ${NAME_OBJ} ${SRC_OBJ} ${LIBFT}
 	${CC} ${FLAGS} $^ -o ${NAME}
