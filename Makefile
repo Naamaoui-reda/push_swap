@@ -6,7 +6,7 @@
 #    By: rnaamaou <rnaamaou@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/02 18:58:43 by rnaamaou          #+#    #+#              #
-#    Updated: 2022/04/02 20:00:21 by rnaamaou         ###   ########.fr        #
+#    Updated: 2022/04/02 20:38:40 by rnaamaou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,30 +18,29 @@ NAME_OBJ = main.o
 
 HEADER = header.h
 
-LIBFT = libft/libft.a
-
 MAKE_LIBFT = libft/
 
-SRC = check_errors.c isnumber.c utils.c free.c
+LIBFT = libft/libft.a
+
+SRC =  check_errors.c free.c isnumber.c utils.c
 
 SRC_OBJ = ${SRC:%c=%o}
 
-CC = cc
-
-CFLAGS = -Wall -Wextra -Werror
+FLAGS = -Wall -Wextra -Werror
+$(LIBFT) :
+	make -C ${MAKE_LIBFT}
 
 all : ${NAME}
 
-${LIBFT} :
-	@make -C ${MAKE_LIBFT}
 
 ${NAME} : ${NAME_OBJ} ${SRC_OBJ} ${LIBFT}
-	${CC} ${CFLAGS} $^ -o ${NAME}
+	${CC} ${FLAGS} $^ -o ${NAME}
 
+%.o : %.c ${HEADER}
+	${CC} ${FLAGS} -c $<
 clean :
 	rm -f ${SRC_OBJ} ${NAME_OBJ}
 	@make clean -C ${MAKE_LIBFT}
-	
 
 fclean : clean
 	rm -f ${NAME}
