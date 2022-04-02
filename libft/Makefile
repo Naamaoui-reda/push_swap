@@ -6,7 +6,7 @@
 #    By: rnaamaou <rnaamaou@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/05 17:34:09 by rnaamaou          #+#    #+#              #
-#    Updated: 2022/04/02 20:45:37 by rnaamaou         ###   ########.fr        #
+#    Updated: 2022/04/02 20:51:51 by rnaamaou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -36,12 +36,14 @@ $(NAME)	:	$(OBJS) $(HEAD)
 	ar rcs	$@	$^
 
 %.o	:	%.c
-	$(CC) $(FLAGS) -c $<
+	@$(CC) $(FLAGS) -c $<
 
 clean:
-	rm -f $(OBJS)
+	@rm -f $(OBJS)
 
 fclean:	clean
-	rm	-f	$(NAME)
+	@rm	-f	$(NAME)
 
 re: fclean all
+
+.PHONY : all fclean clean re
