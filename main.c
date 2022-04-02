@@ -1,33 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   isnumber.c                                         :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rnaamaou <rnaamaou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/31 14:08:29 by rnaamaou          #+#    #+#             */
-/*   Updated: 2022/04/02 18:46:54 by rnaamaou         ###   ########.fr       */
+/*   Created: 2022/04/02 18:53:15 by rnaamaou          #+#    #+#             */
+/*   Updated: 2022/04/02 19:20:33 by rnaamaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "header.h"
 
-bool	is_number(char *str)
+int	main(int ac, char **av)
 {
-	int	i;
-
-	i = 0;
-	if (str == NULL)
-		return (false);
-	i += (str[0] == '-' || str[0] == '+');
-	while (ft_isdigit(str[i]))
-		i++;
-	return (str[i] == '\0');
-}
-
-bool	ft_limit(long long x)
-{
-	if (x > INT_MAX || x < INT_MIN)
-		return(0);
-	return (1);
+	t_stack	a;
+	t_stack	b;
+	t_stack	*tmp;
+	
+	tmp = NULL;
+	if (ac <= 1)
+		return (1);
+	ft_check_err(&a, &b, av, ac);
+	printf("suc");
 }

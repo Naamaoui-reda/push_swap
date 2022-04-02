@@ -5,6 +5,7 @@
 # include <stdbool.h>
 # include <limits.h>
 # include "libft/libft.h"
+# define ERROR_MSG "Error\n"
 typedef struct s_vector
 {
 	int		*elements;
@@ -17,5 +18,8 @@ bool	is_number(char *str);
 bool	ft_limit(long long x);
 void	ft_init(t_vector *vec, char *name);
 void	ft_insert(t_vector *vec, int element);
+void	free_pars(char **av,int n_el);
+void	ft_print_err(char *err, int err_len);
+void	ft_check_err(t_stack *a,t_stack *b,char **av,int ac);
 
 #endif

@@ -1,5 +1,6 @@
 #include "header.h"
 
+static void	ft_repeated
 static void	ft_check_init_sta(char **av, int n_el, t_stack *a, t_stack *b)
 {
 	int	i;
@@ -13,8 +14,14 @@ static void	ft_check_init_sta(char **av, int n_el, t_stack *a, t_stack *b)
 			ft_insert(a, ft_atoi(av[i]));
 		else
 		{
-			
+			free_pars(av,a->n);
+			free (a->elements);
+			free (b->elements);
+			free (a->name);
+			free (b->name);
+			ft_print_err(ERROR_MSG,6);
 		}
+		i++;
 	}
 }
 static int	ft_calc_eleme(char *s,char c)
@@ -52,5 +59,6 @@ void	ft_check_err(t_stack *a,t_stack *b,char **av,int ac)
 	sor = ft_split(buff, ' ');
 	n_el = ft_calc_eleme(buff, ' ');
 	free(buff);
-
+	ft_check_init_sta(sor,n_el,a,b);
+	free_pars(sor,n_el);
 }

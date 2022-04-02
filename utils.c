@@ -34,3 +34,9 @@ void	ft_insert(t_vector *vec, int element)
 	vec->elements[vec->n] = element;
 	vec->n++;
 }
+
+void	ft_print_err(char *err, int err_len)
+{
+	write (2, err,err_len);
+	exit (1);
+}
