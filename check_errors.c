@@ -1,6 +1,24 @@
 #include "header.h"
 
-static void	ft_repeated
+static void	ft_repeated(int *array, int n_el)
+{
+	int	i;
+	int	j;
+
+	i = 0;
+	j = 0;
+	while (i < n_el - 1)
+	{
+		j = i + 1;
+		while (j < n_el)
+		{
+			if (array[i] == array[j++])
+				ft_print_err(ERROR_MSG,6);
+		}
+		i++;
+	}
+}
+
 static void	ft_check_init_sta(char **av, int n_el, t_stack *a, t_stack *b)
 {
 	int	i;
@@ -23,6 +41,7 @@ static void	ft_check_init_sta(char **av, int n_el, t_stack *a, t_stack *b)
 		}
 		i++;
 	}
+	ft_repeated(a->elements,n_el);
 }
 static int	ft_calc_eleme(char *s,char c)
 {
