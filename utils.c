@@ -40,3 +40,10 @@ void	ft_print_err(char *err, int err_len)
 	write (2, err,err_len);
 	exit (1);
 }
+
+void	write_move_name(char *move, char *name)
+{
+	write (1, move, ft_strlen(move));
+	write (1, name, 1);
+	write (1, "\n", 1);
+}
