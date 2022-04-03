@@ -21,5 +21,7 @@ void	ft_insert(t_vector *vec, int element);
 void	free_pars(char **av,int n_el);
 void	ft_print_err(char *err, int err_len);
 void	ft_check_err(t_stack *a,t_stack *b,char **av,int ac);
-
+int	ft_min(int *array, int size);
+int	ft_max(int *array, int size);
+int	ft_is_sorted(int *array, int size);
 #endif
