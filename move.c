@@ -6,7 +6,7 @@
 /*   By: rnaamaou <rnaamaou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/03 15:00:13 by rnaamaou          #+#    #+#             */
-/*   Updated: 2022/04/03 16:27:12 by rnaamaou         ###   ########.fr       */
+/*   Updated: 2022/04/04 13:50:05 by rnaamaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,5 +36,12 @@ void	rotate_reverse(t_stack *s,bool print)
 
 	i = s->n - 1;
 	tmp = s->elements[s->n - 1];
-	
+	while (i > 0)
+	{
+		s->elements[i] = s->elements[i - 1];
+		i--;
+	}
+	s->elements[0] = tmp;
+	if (print)
+		write_move_name("rr", s->name);
 }

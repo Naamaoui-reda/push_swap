@@ -27,4 +27,5 @@ int		ft_is_sorted(int *array, int size);
 int		ft_circular(int *array, int size);
 void	write_move_name(char *move, char *name);
 void	rotate(t_stack *s, bool print);
+void	rotate_reverse(t_stack *s,bool print);
 #endif
