@@ -6,11 +6,20 @@
 /*   By: rnaamaou <rnaamaou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/03 15:00:13 by rnaamaou          #+#    #+#             */
-/*   Updated: 2022/04/04 13:50:05 by rnaamaou         ###   ########.fr       */
+/*   Updated: 2022/04/05 13:31:58 by rnaamaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "header.h"
+
+void	swap(int *a, int *b)
+{
+	int	tmp;
+
+	tmp = *a;
+	*a = *b;
+	*b = tmp;
+}
 
 void	rotate(t_stack *s, bool print)
 {
@@ -44,4 +53,18 @@ void	rotate_reverse(t_stack *s,bool print)
 	s->elements[0] = tmp;
 	if (print)
 		write_move_name("rr", s->name);
+}
+
+void	swap_top(t_stack *s, bool print)
+{
+	swap(&(s->elements[0]), &(s->elements[1]));
+	if (print == true)
+		write_move_name("s", s->name);
+}
+
+void	push_to(t_stack *src, t_stack *dst, bool print)
+{
+	ft_insert(dst, src->elements[0]);
+	rotate_reverse(dst, false);
+	
 }

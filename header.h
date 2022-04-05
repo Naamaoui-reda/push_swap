@@ -28,4 +28,13 @@ int		ft_circular(int *array, int size);
 void	write_move_name(char *move, char *name);
 void	rotate(t_stack *s, bool print);
 void	rotate_reverse(t_stack *s,bool print);
+int		max_int(int a, int b);
+int		min_int(int a, int b);
+int		ft_abs(int x);
+char	**ft_dup_2d(char **av,int n_el);
+void	rrr(t_stack *a, t_stack *b, bool print);
+void	rr(t_stack *a, t_stack *b, bool print);
+int		nearest_num(t_stack s, int num);
+int		calc_moves(int a_best, int b_best);
+void	do_moves(t_stack *s, int moves);
 #endif
