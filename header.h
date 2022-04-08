@@ -37,4 +37,7 @@ void	rr(t_stack *a, t_stack *b, bool print);
 int		nearest_num(t_stack s, int num);
 int		calc_moves(int a_best, int b_best);
 void	do_moves(t_stack *s, int moves);
+void	delete_element(t_vector *vec, int index)
+void	swap_top(t_stack *s, bool print);
+void	push_to(t_stack *src, t_stack *dst, bool print);
 #endif

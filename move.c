@@ -6,7 +6,7 @@
 /*   By: rnaamaou <rnaamaou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/03 15:00:13 by rnaamaou          #+#    #+#             */
-/*   Updated: 2022/04/05 13:31:58 by rnaamaou         ###   ########.fr       */
+/*   Updated: 2022/04/08 00:04:07 by rnaamaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,5 +66,8 @@ void	push_to(t_stack *src, t_stack *dst, bool print)
 {
 	ft_insert(dst, src->elements[0]);
 	rotate_reverse(dst, false);
+	delete_element(src, 0);
+	if (print)
+		write_move_name("p", dst->name);
 	
 }

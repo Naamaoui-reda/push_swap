@@ -6,7 +6,7 @@
 /*   By: rnaamaou <rnaamaou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/05 11:32:01 by rnaamaou          #+#    #+#             */
-/*   Updated: 2022/04/05 13:17:59 by rnaamaou         ###   ########.fr       */
+/*   Updated: 2022/04/08 00:08:23 by rnaamaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,5 +30,8 @@ void	rrr(t_stack *a, t_stack *b, bool print)
 
 void	ss(t_stack *a, t_stack *b, bool print)
 {
-	swap_top
+	swap_top(a, false);
+	swap_top(b, false);
+	if (print)
+		write (1, "ss\n", 3);
 }
