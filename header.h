@@ -45,4 +45,5 @@ void	swap_top(t_stack *s, bool print);
 void	push_to(t_stack *src, t_stack *dst, bool print);
 void	sort_using_ls(t_stack *a, t_stack *b, int index, int min);
 void	sort_small_number(t_stack *a, t_stack *b);
+void	small_sorting(t_stack *a);
 #endif
