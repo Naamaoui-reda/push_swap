@@ -34,10 +34,15 @@ int		ft_abs(int x);
 char	**ft_dup_2d(char **av,int n_el);
 void	rrr(t_stack *a, t_stack *b, bool print);
 void	rr(t_stack *a, t_stack *b, bool print);
+int		ft_sort_sorted(t_stack *s);
+int		best_move(t_stack s, int index);
+void	start_sort(t_stack *a, t_stack *b, int a_best, int b_best);
 int		nearest_num(t_stack s, int num);
 int		calc_moves(int a_best, int b_best);
 void	do_moves(t_stack *s, int moves);
 void	delete_element(t_vector *vec, int index)
 void	swap_top(t_stack *s, bool print);
 void	push_to(t_stack *src, t_stack *dst, bool print);
+void	sort_using_ls(t_stack *a, t_stack *b, int index, int min);
+void	sort_small_number(t_stack *a, t_stack *b);
 #endif

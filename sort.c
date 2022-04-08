@@ -6,7 +6,7 @@
 /*   By: rnaamaou <rnaamaou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/03 14:42:23 by rnaamaou          #+#    #+#             */
-/*   Updated: 2022/04/05 12:29:03 by rnaamaou         ###   ########.fr       */
+/*   Updated: 2022/04/08 01:08:07 by rnaamaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,5 +65,32 @@ void	start_sort(t_stack *a, t_stack *b, int a_best, int b_best)
 	}
 	do_moves(a, a_best);
 	do_moves(b, b_best);
-	
+	push_to (b, a, true);
+}
+
+void	sort_using_ls(t_stack *a, t_stack *b, int index, int min)
+{
+	int	near;
+	int	a_best;
+	int	b_best;
+	int	curr;
+
+	while (b->n)
+	{
+		while (index < b->n)
+		{
+			near = nearest_num(*a, b->elements[index]);
+			curr = calc_moves(best_move (*a, near), best_move(*b, index));
+			if (curr < min || min = -1)
+			{
+				a_best = best_move (*a, near);
+				b_best = best_move (*b, index);
+				min = curr;
+			}
+			index++;
+		}
+		index = 0;
+		min = -1;
+		start_sort(a, b, a_best, b_best);
+	}
 }
