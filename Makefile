@@ -6,7 +6,7 @@
 #    By: rnaamaou <rnaamaou@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/02 18:58:43 by rnaamaou          #+#    #+#              #
-#    Updated: 2022/04/03 14:31:10 by rnaamaou         ###   ########.fr        #
+#    Updated: 2022/04/10 11:39:29 by rnaamaou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,7 +22,7 @@ MAKE_LIBFT = libft/
 
 LIBFT = libft/libft.a
 
-SRC =  check_errors.c free.c isnumber.c utils.c min_max.c
+SRC =  check_errors.c free.c isnumber.c utils.c min_max.c absolute.c move.c moves.c sort_small_numbers.c sort_utils.c sort.c utils2.c subsequence.c
 
 SRC_OBJ = ${SRC:%c=%o}
 

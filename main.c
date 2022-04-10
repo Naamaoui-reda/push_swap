@@ -6,7 +6,7 @@
 /*   By: rnaamaou <rnaamaou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/02 18:53:15 by rnaamaou          #+#    #+#             */
-/*   Updated: 2022/04/08 01:25:33 by rnaamaou         ###   ########.fr       */
+/*   Updated: 2022/04/10 11:40:39 by rnaamaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,13 @@ int	main(int ac, char **av)
 			sort_small_number(&a, &b);
 		else
 		{
-			tmp = lo
+			tmp = long_seq(a);
+			push_no_seq(&a, &b, *tmp);
+			sort_using_ls(&a, &b, 0, -1);
+			ft_sort_sorted(&a);
 		}
 	}
+	free_pair(a, b);
+	if (tmp != NULL)
+		free_single (tmp);
 }

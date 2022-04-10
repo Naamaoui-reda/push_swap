@@ -6,7 +6,7 @@
 /*   By: rnaamaou <rnaamaou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/05 11:52:29 by rnaamaou          #+#    #+#             */
-/*   Updated: 2022/04/05 12:23:30 by rnaamaou         ###   ########.fr       */
+/*   Updated: 2022/04/10 11:43:52 by rnaamaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ int	calc_moves(int a_best, int b_best)
 	if (a_best * b_best < 0)
 		moves = ft_abs(a_best) + ft_abs(b_best);
 	else
-		moves = max_int(ft_abs(a_best, b_best));
+		moves = max_int(ft_abs(a_best), ft_abs(b_best));
 	return (moves);
 }
 

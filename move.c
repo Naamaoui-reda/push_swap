@@ -6,7 +6,7 @@
 /*   By: rnaamaou <rnaamaou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/03 15:00:13 by rnaamaou          #+#    #+#             */
-/*   Updated: 2022/04/08 00:04:07 by rnaamaou         ###   ########.fr       */
+/*   Updated: 2022/04/10 11:42:47 by rnaamaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ void	rotate(t_stack *s, bool print)
 
 	i = 0;
 	tmp = s->elements[0];
-	while (i < s->elements - 1)
+	while (i < s->n - 1)
 	{
 		s->elements[i] =  s->elements [i + 1];
 		i++;

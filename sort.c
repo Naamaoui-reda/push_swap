@@ -6,7 +6,7 @@
 /*   By: rnaamaou <rnaamaou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/03 14:42:23 by rnaamaou          #+#    #+#             */
-/*   Updated: 2022/04/08 01:08:07 by rnaamaou         ###   ########.fr       */
+/*   Updated: 2022/04/10 11:44:18 by rnaamaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,7 +81,7 @@ void	sort_using_ls(t_stack *a, t_stack *b, int index, int min)
 		{
 			near = nearest_num(*a, b->elements[index]);
 			curr = calc_moves(best_move (*a, near), best_move(*b, index));
-			if (curr < min || min = -1)
+			if (curr < min || min == -1)
 			{
 				a_best = best_move (*a, near);
 				b_best = best_move (*b, index);

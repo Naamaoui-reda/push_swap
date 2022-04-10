@@ -37,7 +37,7 @@ void	sort_small_number(t_stack *a, t_stack *b)
 		push_to(a, b, true);
 	}
 	if (ft_circular(a->elements, a->n) == -1)
-		swap_top(a, true)
+		swap_top(a, true);
 	sort_using_ls(a, b, 0, -1);
 	ft_sort_sorted(a);
 }

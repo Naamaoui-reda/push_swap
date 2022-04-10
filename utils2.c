@@ -22,3 +22,4 @@ t_vector	*dup_vec(t_vector vec)
 	dup->capac = vec.capac;
 	return (dup);
 }
+

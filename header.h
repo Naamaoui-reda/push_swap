@@ -19,6 +19,8 @@ bool	ft_limit(long long x);
 void	ft_init(t_vector *vec, char *name);
 void	ft_insert(t_vector *vec, int element);
 void	free_pars(char **av,int n_el);
+void	free_pair(t_stack a, t_stack b);
+void	free_single(t_stack	*s);
 void	ft_print_err(char *err, int err_len);
 void	ft_check_err(t_stack *a,t_stack *b,char **av,int ac);
 int		ft_min(int *array, int size);
@@ -40,10 +42,12 @@ void	start_sort(t_stack *a, t_stack *b, int a_best, int b_best);
 int		nearest_num(t_stack s, int num);
 int		calc_moves(int a_best, int b_best);
 void	do_moves(t_stack *s, int moves);
-void	delete_element(t_vector *vec, int index)
+void	delete_element(t_vector *vec, int index);
 void	swap_top(t_stack *s, bool print);
 void	push_to(t_stack *src, t_stack *dst, bool print);
 void	sort_using_ls(t_stack *a, t_stack *b, int index, int min);
 void	sort_small_number(t_stack *a, t_stack *b);
 void	small_sorting(t_stack *a);
+void	push_no_seq(t_stack *src, t_stack *dst, t_stack seq);
+t_stack	*long_seq(t_stack s);
 #endif
