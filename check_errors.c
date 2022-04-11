@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   check_errors.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: rnaamaou <rnaamaou@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/04/11 13:51:18 by rnaamaou          #+#    #+#             */
+/*   Updated: 2022/04/11 13:58:31 by rnaamaou         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "header.h"
 
 static void	ft_repeated(int *array, int n_el)
@@ -13,7 +25,7 @@ static void	ft_repeated(int *array, int n_el)
 		while (j < n_el)
 		{
 			if (array[i] == array[j++])
-				ft_print_err(ERROR_MSG,6);
+				ft_print_err(ERROR_MSG, 6);
 		}
 		i++;
 	}
@@ -24,47 +36,49 @@ static void	ft_check_init_sta(char **av, int n_el, t_stack *a, t_stack *b)
 	int	i;
 
 	i = 0;
-	ft_init(a,"a");
-	ft_init(b,"b");
+	ft_init(a, "a");
+	ft_init(b, "b");
 	while (i < n_el)
 	{
-		if(is_number(av[i]) && ft_limit(ft_atoi(av[i])))
+		if (is_number(av[i]) && ft_limit(ft_atoi(av[i])))
 			ft_insert(a, ft_atoi(av[i]));
 		else
 		{
-			free_pars(av,a->n);
+			free_pars(av, a->n);
 			free (a->elements);
 			free (b->elements);
 			free (a->name);
 			free (b->name);
-			ft_print_err(ERROR_MSG,6);
+			ft_print_err(ERROR_MSG, 6);
 		}
 		i++;
 	}
-	ft_repeated(a->elements,n_el);
+	ft_repeated(a->elements, n_el);
 }
-static int	ft_calc_eleme(char *s,char c)
+
+static	int	ft_calc_eleme(char *s, char c)
 {
-	int i;
+	int	i;
 	int	to;
 
 	i = 0;
 	to = 0;
 	while (s[i])
 	{
-		while(s[i] == c)
+		while (s[i] == c)
 			i++;
 		while (s[i] != c && s[i])
 			i++;
-		if(s[i - 1] != c)
+		if (s[i - 1] != c)
 			to++;
 	}
-	return (to); 
+	return (to);
 }
-void	ft_check_err(t_stack *a,t_stack *b,char **av,int ac)
+
+void	ft_check_err(t_stack *a, t_stack *b, char **av, int ac)
 {
-	char	**sor;;
 	char	*buff;
+	char	**sor;
 	int		i;
 	int		n_el;
 
@@ -72,12 +86,14 @@ void	ft_check_err(t_stack *a,t_stack *b,char **av,int ac)
 	buff = ft_strdup("");
 	while (i < ac)
 	{
-		buff = ft_strjoin(buff,av[i++]);
+		buff = ft_strjoin(buff, av[i++]);
 		buff = ft_strjoin(buff, " ");
 	}
 	sor = ft_split(buff, ' ');
+	if (*sor == NULL)
+		ft_print_err(ERROR_MSG, 6);
 	n_el = ft_calc_eleme(buff, ' ');
 	free(buff);
-	ft_check_init_sta(sor,n_el,a,b);
-	free_pars(sor,n_el);
+	ft_check_init_sta(sor, n_el, a, b);
+	free_pars(sor, n_el);
 }

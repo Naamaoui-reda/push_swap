@@ -6,7 +6,7 @@
 /*   By: rnaamaou <rnaamaou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/05 11:32:01 by rnaamaou          #+#    #+#             */
-/*   Updated: 2022/04/08 00:08:23 by rnaamaou         ###   ########.fr       */
+/*   Updated: 2022/04/11 14:04:02 by rnaamaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	rr(t_stack *a, t_stack *b, bool print)
 	rotate(a, false);
 	rotate(b, false);
 	if (print)
-		write (1, "rr\n",3);
+		write (1, "rr\n", 3);
 }
 
 void	rrr(t_stack *a, t_stack *b, bool print)
@@ -25,7 +25,7 @@ void	rrr(t_stack *a, t_stack *b, bool print)
 	rotate_reverse(a, false);
 	rotate_reverse(b, false);
 	if (print)
-		write (1, "rrr\n",4);
+		write (1, "rrr\n", 4);
 }
 
 void	ss(t_stack *a, t_stack *b, bool print)

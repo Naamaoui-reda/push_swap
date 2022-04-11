@@ -6,7 +6,7 @@
 /*   By: rnaamaou <rnaamaou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/03 14:42:23 by rnaamaou          #+#    #+#             */
-/*   Updated: 2022/04/10 11:44:18 by rnaamaou         ###   ########.fr       */
+/*   Updated: 2022/04/11 14:05:08 by rnaamaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ int	ft_sort_sorted(t_stack *s)
 		while (s->n - min_i++)
 			rotate_reverse(s, true);
 	else
-		while(min_i--)
+		while (min_i--)
 			rotate(s, true);
 	return (1);
 }
@@ -33,7 +33,7 @@ int	ft_sort_sorted(t_stack *s)
 int	best_move(t_stack s, int index)
 {
 	int	best_moves;
-	
+
 	best_moves = 0;
 	if (index == 0)
 		return (0);
@@ -48,7 +48,7 @@ int	best_move(t_stack s, int index)
 
 void	start_sort(t_stack *a, t_stack *b, int a_best, int b_best)
 {
-	while (min_int(ft_abs(a_best),ft_abs(b_best)) && (a_best * b_best > 0))
+	while (min_int(ft_abs(a_best), ft_abs(b_best)) && (a_best * b_best > 0))
 	{
 		if (a_best < 0)
 		{

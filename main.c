@@ -6,7 +6,7 @@
 /*   By: rnaamaou <rnaamaou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/02 18:53:15 by rnaamaou          #+#    #+#             */
-/*   Updated: 2022/04/10 11:40:39 by rnaamaou         ###   ########.fr       */
+/*   Updated: 2022/04/11 14:01:51 by rnaamaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int	main(int ac, char **av)
 	t_stack	a;
 	t_stack	b;
 	t_stack	*tmp;
-	
+
 	tmp = NULL;
 	if (ac <= 1)
 		return (1);

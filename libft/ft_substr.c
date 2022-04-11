@@ -3,20 +3,20 @@
 /*                                                        :::      ::::::::   */
 /*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rnaamaou <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: rnaamaou <rnaamaou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/07 10:17:36 by rnaamaou          #+#    #+#             */
-/*   Updated: 2021/11/12 21:15:03 by rnaamaou         ###   ########.fr       */
+/*   Updated: 2022/04/11 13:50:06 by rnaamaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include"libft.h"
-#include<stdlib.h>
 
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+#include "libft.h"
+
+char	*ft_substr(char const *s, unsigned int start, int len)
 {
 	char			*str;
 	unsigned int	index_s;
-	size_t			index_l;
+	int				index_l;
 
 	index_l = 0;
 	index_s = 0;

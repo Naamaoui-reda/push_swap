@@ -6,7 +6,7 @@
 /*   By: rnaamaou <rnaamaou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/05 11:52:29 by rnaamaou          #+#    #+#             */
-/*   Updated: 2022/04/10 11:43:52 by rnaamaou         ###   ########.fr       */
+/*   Updated: 2022/04/11 14:06:39 by rnaamaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,13 +18,14 @@ int	nearest_num(t_stack s, int num)
 	int	min_sub;
 	int	min_index;
 	int	curr_sub;
-	
+
 	min_sub = -1;
 	index = 0;
 	while (index < s.n)
 	{
 		curr_sub = s.elements[index] - num;
-		if ((curr_sub < min_sub && curr_sub > 0) || (curr_sub > 0 && min_sub < 0))
+		if ((curr_sub < min_sub && curr_sub > 0)
+			|| (curr_sub > 0 && min_sub < 0))
 		{
 			min_sub = curr_sub;
 			min_index = index;

@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   utils2.c                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: rnaamaou <rnaamaou@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/04/11 14:08:37 by rnaamaou          #+#    #+#             */
+/*   Updated: 2022/04/11 14:08:38 by rnaamaou         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "header.h"
 
 void	delete_element(t_vector *vec, int index)
@@ -22,4 +34,3 @@ t_vector	*dup_vec(t_vector vec)
 	dup->capac = vec.capac;
 	return (dup);
 }
-

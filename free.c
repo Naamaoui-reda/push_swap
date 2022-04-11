@@ -6,13 +6,13 @@
 /*   By: rnaamaou <rnaamaou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/02 18:29:03 by rnaamaou          #+#    #+#             */
-/*   Updated: 2022/04/10 11:41:52 by rnaamaou         ###   ########.fr       */
+/*   Updated: 2022/04/11 13:59:10 by rnaamaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "header.h"
+#include "header.h"
 
-void	free_pars(char **av,int n_el)
+void	free_pars(char **av, int n_el)
 {
 	while (n_el)
 		free(av[--n_el]);

@@ -6,7 +6,7 @@
 /*   By: rnaamaou <rnaamaou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/03 14:07:15 by rnaamaou          #+#    #+#             */
-/*   Updated: 2022/04/05 13:30:55 by rnaamaou         ###   ########.fr       */
+/*   Updated: 2022/04/11 14:02:13 by rnaamaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,7 @@ int	ft_max(int *array, int size)
 int	ft_is_sorted(int *array, int size)
 {
 	int	i;
-	
+
 	i = 0;
 	while (i < size - 1)
 	{
@@ -80,6 +80,6 @@ int	ft_circular(int *array, int size)
 		if (array[i % size] > array[(i + 1) % size])
 			return (-1);
 		i++;
-	} 
+	}
 	return (min_i);
 }

@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   subsequence.c                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: rnaamaou <rnaamaou@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/04/11 14:06:47 by rnaamaou          #+#    #+#             */
+/*   Updated: 2022/04/11 14:10:25 by rnaamaou         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "header.h"
 
 static t_stack	*long_seq_index(t_stack s, int index)
@@ -12,7 +24,7 @@ static t_stack	*long_seq_index(t_stack s, int index)
 	while ((i - index - 1) < s.n)
 	{
 		if (s.elements[(i % s.n)] > seq->elements[seq->n - 1])
-			ft_insert(seq,s.elements[i % s.n]);
+			ft_insert(seq, s.elements[i % s.n]);
 		i++;
 	}
 	return (seq);
@@ -38,7 +50,7 @@ void	push_no_seq(t_stack *src, t_stack *dst, t_stack seq)
 	i = 0;
 	while (i < iteration)
 	{
-		if(in_seq(*(src->elements), seq.elements,seq.n))
+		if (in_seq(*(src->elements), seq.elements, seq.n))
 			rotate(src, true);
 		else
 			push_to(src, dst, true);
@@ -62,7 +74,7 @@ t_stack	*long_seq(t_stack s)
 		if (tmp1->n > len)
 		{
 			len = tmp1->n;
-			if(tmp2 != NULL)
+			if (tmp2 != NULL)
 				free_single(tmp2);
 			tmp2 = tmp1;
 		}

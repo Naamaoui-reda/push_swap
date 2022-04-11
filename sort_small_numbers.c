@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   sort_small_numbers.c                               :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: rnaamaou <rnaamaou@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/04/11 14:05:18 by rnaamaou          #+#    #+#             */
+/*   Updated: 2022/04/11 14:06:11 by rnaamaou         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "header.h"
 
 void	push_half(t_stack *a, t_stack *b)
@@ -10,7 +22,7 @@ void	push_half(t_stack *a, t_stack *b)
 	while (a->n > max_half)
 	{
 		half = a->n / 2;
-		max_index = ft_max(a->elements,a->n);
+		max_index = ft_max(a->elements, a->n);
 		if (max_index < half)
 			max_index = (-max_index);
 		else
@@ -32,7 +44,7 @@ void	sort_small_number(t_stack *a, t_stack *b)
 {
 	while (a->n != 3)
 	{
-		if (ft_max(a->elements,a->n) == 0)
+		if (ft_max(a->elements, a->n) == 0)
 			rotate (a, true);
 		push_to(a, b, true);
 	}
