@@ -6,7 +6,7 @@
 /*   By: rnaamaou <rnaamaou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/11 13:59:25 by rnaamaou          #+#    #+#             */
-/*   Updated: 2022/04/11 14:10:07 by rnaamaou         ###   ########.fr       */
+/*   Updated: 2022/04/11 15:31:45 by rnaamaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ typedef struct s_vector
 	char	*name;
 }t_vector;
 typedef t_vector	t_stack;
+int		ft_check_space(char *s);
 bool	is_number(char *str);
 bool	ft_limit(long long x);
 void	ft_init(t_vector *vec, char *name);

@@ -6,7 +6,7 @@
 /*   By: rnaamaou <rnaamaou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/11 13:51:18 by rnaamaou          #+#    #+#             */
-/*   Updated: 2022/04/11 13:58:31 by rnaamaou         ###   ########.fr       */
+/*   Updated: 2022/04/11 15:31:58 by rnaamaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,6 +75,23 @@ static	int	ft_calc_eleme(char *s, char c)
 	return (to);
 }
 
+int	ft_check_space(char *s)
+{
+	int	i;
+
+	i = 0;
+	while (s[i])
+	{
+		if (s[i] == ' ')
+			i++;
+		else
+			return (0);
+	}
+	if (s[i] == '\0')
+		return (1);
+	return (0);
+}
+
 void	ft_check_err(t_stack *a, t_stack *b, char **av, int ac)
 {
 	char	*buff;
@@ -86,6 +103,8 @@ void	ft_check_err(t_stack *a, t_stack *b, char **av, int ac)
 	buff = ft_strdup("");
 	while (i < ac)
 	{
+		if (ft_check_space(av[i]))
+			ft_print_err (ERROR_MSG, 6);
 		buff = ft_strjoin(buff, av[i++]);
 		buff = ft_strjoin(buff, " ");
 	}
