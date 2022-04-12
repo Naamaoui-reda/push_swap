@@ -6,7 +6,7 @@
 /*   By: rnaamaou <rnaamaou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/11 13:59:25 by rnaamaou          #+#    #+#             */
-/*   Updated: 2022/04/12 13:34:23 by rnaamaou         ###   ########.fr       */
+/*   Updated: 2022/04/12 19:38:35 by rnaamaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,4 +64,10 @@ void	sort_small_number(t_stack *a, t_stack *b);
 void	small_sorting(t_stack *a);
 void	push_no_seq(t_stack *src, t_stack *dst, t_stack seq);
 t_stack	*long_seq(t_stack s);
+char	*get_next_line(int fd);
+void	ss(t_stack *a, t_stack *b, bool print);
+/************checker*****/
+int	move_exist(char *move);
+void	move (int key, t_stack *a, t_stack *b);
+int	test_moves(char **moves, t_stack *a, t_stack *b);
 #endif
