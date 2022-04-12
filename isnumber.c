@@ -6,7 +6,7 @@
 /*   By: rnaamaou <rnaamaou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/31 14:08:29 by rnaamaou          #+#    #+#             */
-/*   Updated: 2022/04/11 14:01:17 by rnaamaou         ###   ########.fr       */
+/*   Updated: 2022/04/12 13:34:05 by rnaamaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,8 @@ bool	is_number(char *str)
 	i += (str[0] == '-' || str[0] == '+');
 	while (ft_isdigit(str[i]))
 		i++;
+	if (str[i - 1] == '-' || str[i - 1] == '+')
+		ft_print_err(ERROR_MSG, 6);
 	return (str[i] == '\0');
 }
 
