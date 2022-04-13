@@ -6,7 +6,7 @@
 #    By: rnaamaou <rnaamaou@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/02 18:58:43 by rnaamaou          #+#    #+#              #
-#    Updated: 2022/04/12 20:25:09 by rnaamaou         ###   ########.fr        #
+#    Updated: 2022/04/13 18:17:01 by rnaamaou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,9 @@ NAME_OBJ = main.o
 
 HEADER = header.h
 
-BONUS = checker
+CHECKER = checker
+
+BONUS = ${CHECKER}
 
 BONUS_SRC = checker.c\
 			checker_utils.c
@@ -40,13 +42,15 @@ FLAGS = -Wall -Wextra -Werror
 
 all : ${NAME}
 
+bonus : ${CHECKER}
+
 ${LIBFT} :
 	make -C ${MAKE_LIBFT}
 
 ${NAME} : ${NAME_OBJ} ${SRC_OBJ} ${LIBFT}
 	${CC} ${FLAGS} $^ -o ${NAME}
 
-bonus : ${BONUS_OBJ} ${SRC_OBJ} ${LIBFT}
+${CHECKER} : ${BONUS_OBJ} ${SRC_OBJ} ${LIBFT}
 	${CC} ${FLAGS} $^ -o ${BONUS}
 
 %.o : %.c ${HEADER}
@@ -63,4 +67,4 @@ fclean : clean
 
 re : fclean all
 
-.PHONY : clean fclean all re
+.PHONY : clean fclean all re bonus
