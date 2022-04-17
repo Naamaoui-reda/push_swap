@@ -6,7 +6,7 @@
 /*   By: rnaamaou <rnaamaou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/11 13:59:25 by rnaamaou          #+#    #+#             */
-/*   Updated: 2022/04/12 19:38:35 by rnaamaou         ###   ########.fr       */
+/*   Updated: 2022/04/17 15:32:29 by rnaamaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,6 @@ void	rotate_reverse(t_stack *s, bool print);
 int		max_int(int a, int b);
 int		min_int(int a, int b);
 int		ft_abs(int x);
-char	**ft_dup_2d(char **av, int n_el);
 void	rrr(t_stack *a, t_stack *b, bool print);
 void	rr(t_stack *a, t_stack *b, bool print);
 int		ft_sort_sorted(t_stack *s);

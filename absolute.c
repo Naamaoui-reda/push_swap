@@ -6,7 +6,7 @@
 /*   By: rnaamaou <rnaamaou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/05 11:13:33 by rnaamaou          #+#    #+#             */
-/*   Updated: 2022/04/11 13:51:03 by rnaamaou         ###   ########.fr       */
+/*   Updated: 2022/04/17 15:32:21 by rnaamaou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,21 +31,4 @@ int	ft_abs(int x)
 	if (x < 0)
 		x *= -1;
 	return (x);
-}
-
-char	**ft_dup_2d(char **av, int n_el)
-{
-	char	**new;
-	int		i;
-
-	i = 0;
-	new = (char **)malloc(sizeof(char *) * n_el);
-	if (new == NULL)
-		ft_print_err(ERROR_MSG, 6);
-	while (i < n_el)
-	{
-		new[i] = ft_strdup(av[i]);
-		i++;
-	}
-	return (new);
 }
